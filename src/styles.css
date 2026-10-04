@@ -260,6 +260,133 @@ input {
   line-height: 1.6;
 }
 
+.tab-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.notice {
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, #dbe3ef);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0 0 16px;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+th {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  background: #f8fafc;
+}
+
+.table-title {
+  margin: 22px 0 10px;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-unconfirmed {
+  background: color-mix(in srgb, var(--warn) 12%, #ffffff);
+  color: var(--warn);
+}
+
+.badge-confirmed {
+  background: color-mix(in srgb, var(--accent) 14%, #ffffff);
+  color: #0f766e;
+}
+
+.badge-invalidated {
+  background: #f1f5f9;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.badge-pending-review {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.chip-active {
+  background: var(--primary) !important;
+  color: #ffffff;
+  border-color: var(--primary) !important;
+}
+
+select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: #172033;
+  background: #ffffff;
+  font: inherit;
+}
+
+.export-view {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.log-index {
+  font-size: 11px;
+  font-weight: 700;
+  width: auto;
+  min-width: 46px;
+  padding: 0 6px;
+}
+
 @media (max-width: 860px) {
   .hero,
   .workspace,
@@ -269,5 +396,10 @@ input {
 
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
   }
 }
